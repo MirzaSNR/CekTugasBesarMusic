@@ -9,5 +9,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //komen majid
         //Ilham Yanuar
+        //Saka Wijaya
     }
 }
