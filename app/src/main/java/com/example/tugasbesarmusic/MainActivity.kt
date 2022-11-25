@@ -10,5 +10,6 @@ class MainActivity : AppCompatActivity() {
         //komen majid
         //Ilham Yanuar
         //Saka Wijaya
+        //adrian reyhan
     }
 }
