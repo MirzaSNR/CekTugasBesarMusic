@@ -18,7 +18,7 @@ class TrackList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tracklist)
 
-        imageAdapter()
+        imageAdapterTrackList()
         back_tracklist()
     }
     private fun back_tracklist(){
@@ -34,12 +34,12 @@ class TrackList : AppCompatActivity() {
         )
     }
 
-    private fun imageAdapter(){
+    private fun imageAdapterTrackList(){
         val images = listOf<Int>(
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
+            R.drawable.cover_joji_smithereens,
+            R.drawable.cover_joji_smithereens,
+            R.drawable.cover_joji_smithereens,
+            R.drawable.cover_joji_smithereens,
             R.drawable.cover_white,
             R.drawable.cover_white,
             R.drawable.cover_white,
