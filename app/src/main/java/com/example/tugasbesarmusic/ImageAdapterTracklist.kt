@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ImageAdapterTracklist (
-    private val listImage: List<Int>
+    private val listTrackList: List<ModelTrackList>
 ) : RecyclerView.Adapter<ImageAdapterTracklist.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= ViewHolder(
@@ -16,16 +16,17 @@ class ImageAdapterTracklist (
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.image.setImageResource( listImage[position] )
-        holder.text.setText("Nama Track" + position)
-        holder.text2.setText("Nama Artist" + position)
+        val tracklist = listTrackList[position]
+        holder.imageView.setImageResource( tracklist.image )
+        holder.textView.text = tracklist.name
+        holder.textView2.text = tracklist.name2
     }
 
-    override fun getItemCount() = listImage.size
+    override fun getItemCount() = listTrackList.size
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val image = view.findViewById<ImageView>(R.id.imageView)
-        val text = view.findViewById<TextView>(R.id.textView)
-        val text2 = view.findViewById<TextView>(R.id.textView2)
+        val imageView = view.findViewById<ImageView>(R.id.imageView)
+        val textView = view.findViewById<TextView>(R.id.textView)
+        val textView2 = view.findViewById<TextView>(R.id.textView2)
     }
 }

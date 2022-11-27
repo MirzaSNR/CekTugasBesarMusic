@@ -18,39 +18,39 @@ class TrackList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tracklist)
 
-        imageAdapterTrackList()
-        back_tracklist()
+        modelAdapterTrackList()
+//        back_tracklist()
     }
-    private fun back_tracklist(){
-        tombolback_tracklist.setOnClickListener(
-            View.OnClickListener {
-                /*val i = Intent(
-                   this,
-                   halaman2::class.java)
-                startActivity(i)
-                BACK dicomment karena belum ada file
-                xml yang menuju ke halaman tsb belum di push oleh rekan sekelompok */
-            }
-        )
-    }
+//    private fun back_tracklist(){
+//        tombolback_tracklist.setOnClickListener(
+//            View.OnClickListener {
+//                val i = Intent(
+//                   this,
+//                   halaman2::class.java)
+//                startActivity(i)
+//
+//                modelAdapterTrackList()
+//            }
+//        )
+//    }
 
-    private fun imageAdapterTrackList(){
-        val images = listOf<Int>(
-            R.drawable.cover_joji_smithereens,
-            R.drawable.cover_joji_smithereens,
-            R.drawable.cover_joji_smithereens,
-            R.drawable.cover_joji_smithereens,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
-            R.drawable.cover_white,
+    private fun modelAdapterTrackList(){
+        val tracklist = listOf<ModelTrackList>(
+            ModelTrackList(1, "Die For You", "Joji", R.drawable.cover_joji_smithereens),
+            ModelTrackList(2, "Dissolve", "Joji", R.drawable.cover_joji_smithereens),
+            ModelTrackList(3, "Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens),
+            ModelTrackList(4, "YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens),
+            ModelTrackList(5, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(6, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(7, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(8, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(9, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(10, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(11, "Nama Track", "Nama Artist", R.drawable.cover_white),
+            ModelTrackList(12, "Nama Track", "Nama Artist", R.drawable.cover_white),
         )
 
-        val imageAdapterTracklist = ImageAdapterTracklist( images )
+        val imageAdapterTracklist = ImageAdapterTracklist( tracklist )
         findViewById<RecyclerView>(R.id.recyclerView).adapter = imageAdapterTracklist
     }
 }
