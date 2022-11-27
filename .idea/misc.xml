@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/round_button.xml" value="0.1805" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_album.xml" value="0.18" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_home_music.xml" value="0.17074275362318841" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_playlist.xml" value="0.25" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_tracklist.xml" value="0.17074275362318841" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/adapter_image_tracklist.xml" value="0.17074275362318841" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/grid_album.xml" value="0.5231316725978647" />
+        <entry key="..\:/APK/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/grid_playlist.xml" value="0.22" />
+        <entry key="..\:/Users/IdeaPad Gaming/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
