@@ -1,5 +1,4 @@
-package com.example.tugasbesarmusic
-//
+//package com.example.tugasbesarmusic
 //import android.os.Build
 //import androidx.appcompat.app.AppCompatActivity
 //import android.os.Bundle
@@ -10,7 +9,7 @@ package com.example.tugasbesarmusic
 //
 //class AlbumActivity : AppCompatActivity() {
 //    private lateinit var rv_album: RecyclerView
-//    private lateinit var list: ArrayList<MusicTrackAlbum>
+//    private lateinit var list: ArrayList<MusicTrack>
 //    private lateinit var gridAlbumAdapter: GridAlbumAdapter
 //    @RequiresApi(Build.VERSION_CODES.O)
 //    override fun onCreate(savedInstanceState: Bundle?) {

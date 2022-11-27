@@ -45,7 +45,8 @@
         android:id="@+id/Album"
         android:layout_width="146dp"
         android:layout_height="47dp"
-        android:text="ALBUM"
+        tools:text="ALBUM"
+        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="32sp"
@@ -81,7 +82,8 @@
         app:layout_constraintTop_toBottomOf="@+id/imgAlbum"
         app:layout_constraintVertical_bias="0.054" />
 
-    <RelativeLayout
+    <GridLayout
+        android:id="@+id/grid_Album"
         android:layout_width="match_parent"
         android:layout_height="468dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,19 +92,18 @@
         app:layout_constraintTop_toBottomOf="@+id/btnsearch_album"
         app:layout_constraintVertical_bias="1.0">
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_album"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/grid_album" />
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:itemCount="15"
+            tools:listitem="@layout/grid_album"
+            />
 
-        <GridView
-            android:id="@+id/grid_Album"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:numColumns="2" />
-
-    </RelativeLayout>
+    </GridLayout>
 
     <SearchView
         android:layout_width="326dp"

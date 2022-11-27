@@ -1,4 +1,4 @@
-package com.example.tugasbesarmusic
+//package com.example.tugasbesarmusic
 //import android.content.Intent
 //import androidx.recyclerview.widget.RecyclerView
 //import android.view.LayoutInflater
@@ -12,7 +12,7 @@ package com.example.tugasbesarmusic
 //import com.example.tugasbesarmusic.R
 //import java.util.*
 //class GridAlbumAdapter internal constructor(private val gridAlbumList:
-//                                            ArrayList<MusicTrackAlbum>) :
+//                                            ArrayList<MusicTrack>) :
 //    RecyclerView.Adapter<GridAlbumAdapter.GridViewHolder>() {
 //    private lateinit var onItemClickCallback: OnItemClickCallback
 //    internal fun setOnItemClickCallback(onItemClickCallback:
@@ -33,8 +33,7 @@ package com.example.tugasbesarmusic
 //            .apply(RequestOptions().placeholder(R.drawable.coverwhite).fitCenter())
 //            .into(holder.imgPhoto)
 //        holder.itemView.setOnClickListener {
-//            val intent = Intent(holder.itemView.context,
-//                DetailAlbumActivity::class.java)
+//            val intent = Intent(holder.itemView.context, DetailAlbumActivity::class.java)
 //            intent.putExtra("item", grid.album)
 //            holder.itemView.context.startActivity(intent)
 //        }
@@ -47,9 +46,9 @@ package com.example.tugasbesarmusic
 //        RecyclerView.ViewHolder(itemView) {
 //        var imgPhoto: ImageView =
 //            itemView.findViewById(R.id.image_Album)
-//        var title: TextView = itemView.findViewById(R.id.name_album)
+//        var title: TextView = itemView.findViewById(R.id.name_Album)
 //    }
 //    interface OnItemClickCallback {
-//        fun onItemClicked(data: MusicTrackAlbum)
+//        fun onItemClicked(data: MusicTrack)
 //    }
 //}
