@@ -29,6 +29,9 @@ class TrackList : AppCompatActivity() {
 //                   halaman2::class.java)
 //                startActivity(i)
 //
+//    BACK dicomment karena belum ada file
+//    xml yang menuju ke halaman tsb belum di push oleh rekan sekelompok */
+//
 //                modelAdapterTrackList()
 //            }
 //        )
