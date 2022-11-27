@@ -65,6 +65,7 @@
 //
 //                        artUri = artUriC)
 //                    val file = File(trackMusic.path)
+
 //                    if (file.exists()){
 //                        tempList.add(trackMusic)
 //                    }

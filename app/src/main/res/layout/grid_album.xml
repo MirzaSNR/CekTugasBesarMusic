@@ -30,7 +30,6 @@
         android:textSize="20sp"
         android:textStyle="bold"
         tools:text="Nama Album">
-
     </TextView>
 
     <TextView

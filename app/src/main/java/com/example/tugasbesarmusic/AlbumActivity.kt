@@ -24,6 +24,7 @@
 //            finish()
 //        }
 //    }
+
 //    private fun showRecyclerGrid() {
 //        rv_album.layoutManager = GridLayoutManager(this@AlbumActivity, 2)
 //        gridAlbumAdapter = GridAlbumAdapter(list)

@@ -48,6 +48,7 @@
 //            itemView.findViewById(R.id.image_Album)
 //        var title: TextView = itemView.findViewById(R.id.name_Album)
 //    }
+
 //    interface OnItemClickCallback {
 //        fun onItemClicked(data: MusicTrack)
 //    }
