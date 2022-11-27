@@ -1,4 +1,4 @@
-//package com.example.tugasbesarmusic
+package com.example.tugasbesarmusic
 //import android.content.Intent
 //import androidx.recyclerview.widget.RecyclerView
 //import android.view.LayoutInflater
@@ -52,4 +52,8 @@
 //    interface OnItemClickCallback {
 //        fun onItemClicked(data: MusicTrack)
 //    }
+//}
+//fun setfilter(datasearch: ArrayList<MusicTrack>) {
+//    this.grid_album = datasearch
+//    notifyDataSetChanged()
 //}
