@@ -150,8 +150,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/viera" />
+                        android:layout_gravity="center_horizontal"></ImageView>
+<!--                        android:src="@drawable/viera" />-->
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -192,8 +192,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/vieera" />
+                        android:layout_gravity="center_horizontal"></ImageView>
+<!--                        android:src="@drawable/vieera" />-->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -231,8 +231,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/vieraaa" />
+                        android:layout_gravity="center_horizontal"></ImageView>
+<!--                        android:src="@drawable/vieraaa" />-->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -271,8 +271,8 @@
                     <ImageView
                         android:layout_width="130dp"
                         android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/vierra" />
+                        android:layout_gravity="center_horizontal"></ImageView>
+<!--                        android:src="@drawable/vierra" />-->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -312,8 +312,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/vierrraa" />
+                        android:layout_gravity="center_horizontal"></ImageView>
+<!--                        android:src="@drawable/vierrraa" />-->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -352,8 +352,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cover_black" />
+                        android:layout_gravity="center_horizontal"></ImageView>
+<!--                        android:src="@drawable/cover_black" />-->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
