@@ -50,8 +50,8 @@
             </intent-filter>
         </activity>
 <!--        <activity-->
-<!--            android:name=""-->
-<!--            android:exported="true">-->
+<!--            //android:name=".Playlist"-->
+<!--            //android:exported="true">-->
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
