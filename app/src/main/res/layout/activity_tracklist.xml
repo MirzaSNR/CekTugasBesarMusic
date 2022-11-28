@@ -17,11 +17,12 @@
             android:layout_height="150dp"
             android:background="#232323"
             android:padding="20dp">
+
             <ImageView
                 android:id="@+id/tombolback_tracklist"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/back"/>
+                android:src="@drawable/back" />
 
             <TextView
                 android:layout_width="wrap_content"
