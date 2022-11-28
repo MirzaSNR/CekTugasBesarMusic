@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         //Ilham Yanuar
         //Saka Wijaya
         //adrian reyhan
-        //Firman Syahrul Nizam
+        //Firman Syahrul Nizam kece
         //naufal adli
         //Muhammad Wahyu Anggoro
         //coba kkkoooppp
