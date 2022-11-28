@@ -4,10 +4,9 @@ import android.provider.MediaStore
 
 class MusicTrack {
     lateinit var name: String
-    lateinit var playlist: ArrayList<MusicTrack>
-    lateinit var createdBy: String
-    lateinit var createdOn: String
+    lateinit var ALbum: ArrayList<MusicTrack>
+    lateinit var NameArtis: String
 }
-class MusicPlaylist {
+class MusicAlbum {
     var ref: ArrayList<MediaStore.Audio.Albums> = ArrayList()
 }

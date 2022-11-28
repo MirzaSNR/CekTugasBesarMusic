@@ -9,10 +9,11 @@
     android:layout_marginTop="6dp"
     android:layout_marginBottom="6dp"
     android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
     android:padding="10dp"
     android:orientation="vertical"
     >
-
+    
     <ImageView
         android:id="@+id/image_Album"
         android:layout_width="160dp"
@@ -40,7 +41,6 @@
         android:textSize="13sp"
         android:textStyle="bold"
         tools:text="Nama Artis">
-
     </TextView>
 
 </LinearLayout>
