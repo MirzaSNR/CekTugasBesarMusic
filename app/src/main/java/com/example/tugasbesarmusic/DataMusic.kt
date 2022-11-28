@@ -1,4 +1,4 @@
-package com.example.tugasbesarmusic
+//package com.example.tugasbesarmusic
 //
 //import android.annotation.SuppressLint
 //import android.content.Context
@@ -65,7 +65,7 @@ package com.example.tugasbesarmusic
 //
 //                        artUri = artUriC)
 //                    val file = File(trackMusic.path)
-
+//
 //                    if (file.exists()){
 //                        tempList.add(trackMusic)
 //                    }
