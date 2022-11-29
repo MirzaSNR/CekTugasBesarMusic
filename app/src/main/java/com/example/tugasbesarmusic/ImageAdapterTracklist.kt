@@ -25,6 +25,13 @@ class ImageAdapterTracklist(
         return CourseViewHolder(itemView)
     }
 
+    fun filterList(filterlist: ArrayList<TracklistAttribute>) {
+
+        courseList = filterlist
+
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: ImageAdapterTracklist.CourseViewHolder, position: Int) {
         // on below line we are setting data to our text view and our image view.
         holder.titleName.text = courseList.get(position).title
