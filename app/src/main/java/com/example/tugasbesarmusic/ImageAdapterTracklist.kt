@@ -7,26 +7,39 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ImageAdapterTracklist (
-    private val listTrackList: List<ModelTrackList>
-) : RecyclerView.Adapter<ImageAdapterTracklist.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= ViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.adapter_image_tracklist, parent, false)
-    )
+class ImageAdapterTracklist(
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val tracklist = listTrackList[position]
-        holder.imageView.setImageResource( tracklist.image )
-        holder.textView.text = tracklist.name
-        holder.textView2.text = tracklist.name2
+    private var courseList: ArrayList<TracklistAttribute>,
+) : RecyclerView.Adapter<ImageAdapterTracklist.CourseViewHolder>() {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ImageAdapterTracklist.CourseViewHolder {
+
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.adapter_image_tracklist,
+            parent, false
+        )
+
+        return CourseViewHolder(itemView)
     }
 
-    override fun getItemCount() = listTrackList.size
+    override fun onBindViewHolder(holder: ImageAdapterTracklist.CourseViewHolder, position: Int) {
+        // on below line we are setting data to our text view and our image view.
+        holder.titleName.text = courseList.get(position).title
+        holder.artistName.text = courseList.get(position).artist
+        holder.imageTrack.setImageResource(courseList.get(position).image)
+    }
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val imageView = view.findViewById<ImageView>(R.id.imageView)
-        val textView = view.findViewById<TextView>(R.id.textView)
-        val textView2 = view.findViewById<TextView>(R.id.textView2)
+    class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val titleName: TextView = itemView.findViewById(R.id.TextView_track)
+        val artistName: TextView = itemView.findViewById(R.id.TextView_track2)
+        val imageTrack: ImageView = itemView.findViewById(R.id.imageView_track)
+    }
+
+    override fun getItemCount(): Int {
+        return  courseList.size
     }
 }
