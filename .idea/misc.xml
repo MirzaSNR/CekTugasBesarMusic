@@ -3,6 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/bg_header.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/circle_icon.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/frame_image_isiplaylist.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/frame_image_tracklist.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/drawable/kotakgrid.xml" value="0.1195" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_album.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_folderlist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_home_music.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_isi_playlist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_listfolder.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_playlist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/activity_tracklist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/adapter_image_isiplaylist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/adapter_image_tracklist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/grid_album.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/grid_folderlist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/grid_folderlist2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/grid_playlist.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sofiyan/AndroidStudioProjects/tugasbesarmusic/app/src/main/res/layout/mylibrary_layout.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
