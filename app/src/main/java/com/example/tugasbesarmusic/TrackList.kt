@@ -54,7 +54,7 @@ class TrackList : AppCompatActivity() {
             View.OnClickListener {
                 val i = Intent(
                     this,
-                    MainActivity::class.java)
+                    Mylibrary::class.java)
                 startActivity(i)
             }
         )
