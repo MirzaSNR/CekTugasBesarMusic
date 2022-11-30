@@ -59,11 +59,8 @@
 //                        Uri.parse("content://media/external/audio/albumart")
 //
 //                    val artUriC = Uri.withAppendedPath(uri, albumidC).toString()
-//                    val trackMusic = MusicTrack(id = idC, title = titleC, album =
-//
-//                    albumC, artist = artistC, path = pathC, duration = durationC,
-//
-//                        artUri = artUriC)
+//                    val trackMusic = MusicTrack(id = idC, title = titleC, album = albumC,
+//                        artist = artistC, path = pathC, duration = durationC, artUri = artUriC)
 //                    val file = File(trackMusic.path)
 //
 //                    if (file.exists()){
