@@ -12,25 +12,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="#232323"
             android:padding="20dp">
+
             <ImageView
                 android:id="@+id/tombolback_isiplaylist"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/back"/>
+                android:src="@drawable/back" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Isi Playlist"
                 android:layout_centerHorizontal="true"
+                android:text="Isi Playlist"
                 android:textColor="@color/white"
-                android:textSize="35dp"
-                />
+                android:textSize="35dp" />
         </RelativeLayout>
 
         <ImageView
@@ -67,28 +68,28 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold" />
+
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:listitem="@layout/adapter_image_isiplaylist"
-            tools:itemCount="15"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
-        </androidx.recyclerview.widget.RecyclerView>
+            app:layout_constraintVertical_bias="0.0"
+            app:spanCount="2"
+            tools:itemCount="15"
+            tools:listitem="@layout/adapter_image_isiplaylist"></androidx.recyclerview.widget.RecyclerView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
