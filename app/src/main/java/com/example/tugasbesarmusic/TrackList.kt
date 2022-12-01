@@ -22,7 +22,7 @@ class TrackList : AppCompatActivity() {
         setContentView(R.layout.activity_tracklist)
 
         back_tracklist()
-
+//
 
         courseRV = findViewById(R.id.idRVCourses)
 
