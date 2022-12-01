@@ -32,6 +32,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".HomeMusic"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".IsiPlaylist"
             android:exported="true">
             <intent-filter>
