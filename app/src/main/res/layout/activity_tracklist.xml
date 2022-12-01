@@ -78,7 +78,7 @@
         android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVCourses"
+        android:id="@+id/idRVtracklist"
         android:layout_width="0dp"
         android:layout_height="0dp"
         tools:listitem="@layout/adapter_image_tracklist"
