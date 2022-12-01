@@ -10,36 +10,36 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ImageAdapterTracklist(
 
-    private var tracklistList: ArrayList<TracklistAttribute>,
-) : RecyclerView.Adapter<ImageAdapterTracklist.tracklistHolder>() {
+    private var courseList: ArrayList<TracklistAttribute>,
+) : RecyclerView.Adapter<ImageAdapterTracklist.CourseViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ImageAdapterTracklist.tracklistHolder {
+    ): ImageAdapterTracklist.CourseViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.adapter_image_tracklist,
             parent, false
         )
 
-        return tracklistHolder(itemView)
+        return CourseViewHolder(itemView)
     }
 
     fun filterList(filterlist: ArrayList<TracklistAttribute>) {
 
-        tracklistList = filterlist
+        courseList = filterlist
 
         notifyDataSetChanged()
     }
 
-    override fun onBindViewHolder(holder: ImageAdapterTracklist.tracklistHolder, position: Int) {
+    override fun onBindViewHolder(holder: ImageAdapterTracklist.CourseViewHolder, position: Int) {
         // on below line we are setting data to our text view and our image view.
-        holder.titleName.text = tracklistList.get(position).title
-        holder.artistName.text = tracklistList.get(position).artist
-        holder.imageTrack.setImageResource(tracklistList.get(position).image)
+        holder.titleName.text = courseList.get(position).title
+        holder.artistName.text = courseList.get(position).artist
+        holder.imageTrack.setImageResource(courseList.get(position).image)
     }
 
-    class tracklistHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val titleName: TextView = itemView.findViewById(R.id.TextView_track)
         val artistName: TextView = itemView.findViewById(R.id.TextView_track2)
@@ -47,6 +47,6 @@ class ImageAdapterTracklist(
     }
 
     override fun getItemCount(): Int {
-        return  tracklistList.size
+        return  courseList.size
     }
 }
