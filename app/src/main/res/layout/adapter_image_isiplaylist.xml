@@ -19,7 +19,7 @@
         android:adjustViewBounds="true"
         android:background="@color/black"
         android:padding="10dp"
-        android:src="@drawable/coverwhite">
+        android:src="@drawable/cover_white">
     </ImageView>
     <TextView
         android:id="@+id/textView_isiplaylist"

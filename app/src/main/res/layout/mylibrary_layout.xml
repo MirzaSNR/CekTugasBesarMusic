@@ -115,7 +115,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="55dp"
-                        android:background="@drawable/coverwhite">
+                        android:background="@drawable/cover_white">
 
                     </ImageView>
 
