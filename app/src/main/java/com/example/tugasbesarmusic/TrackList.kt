@@ -3,8 +3,6 @@ package com.example.tugasbesarmusic
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
@@ -13,9 +11,9 @@ import kotlinx.android.synthetic.main.activity_tracklist.*
 
 class TrackList : AppCompatActivity() {
 
-    lateinit var courseRV: RecyclerView
+    lateinit var tracklistRV: RecyclerView
     lateinit var imageAdapterTracklist: ImageAdapterTracklist
-    lateinit var courseList: ArrayList<TracklistAttribute>
+    lateinit var tracklistList: ArrayList<TracklistAttribute>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,26 +22,26 @@ class TrackList : AppCompatActivity() {
         back_tracklist()
 //
 
-        courseRV = findViewById(R.id.idRVCourses)
+        tracklistRV = findViewById(R.id.idRVTracklist)
 
-        courseList = ArrayList()
+        tracklistList = ArrayList()
 
-        imageAdapterTracklist = ImageAdapterTracklist(courseList)
+        imageAdapterTracklist = ImageAdapterTracklist(tracklistList)
 
-        courseRV.adapter = imageAdapterTracklist
+        tracklistRV.adapter = imageAdapterTracklist
 
-        courseList.add(TracklistAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
-        courseList.add(TracklistAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
-        courseList.add(TracklistAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
-        courseList.add(TracklistAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(TracklistAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(TracklistAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(TracklistAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
 
         imageAdapterTracklist.notifyDataSetChanged()
 
@@ -68,7 +66,7 @@ class TrackList : AppCompatActivity() {
         val filteredlist: ArrayList<TracklistAttribute> = ArrayList()
 
 
-        for (item in courseList) {
+        for (item in tracklistList) {
 
             if (item.title.toLowerCase().contains(text.toLowerCase())) {
 
