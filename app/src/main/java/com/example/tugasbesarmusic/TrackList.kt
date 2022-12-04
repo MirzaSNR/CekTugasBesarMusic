@@ -46,24 +46,8 @@ class TrackList : AppCompatActivity() {
         courseList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
 
         imageAdapterTracklist.notifyDataSetChanged()
-    }
 
-    //Fungsi Button Back
-    private fun back_tracklist(){
-        tombolback_tracklist.setOnClickListener(
-
-            View.OnClickListener {
-                val i = Intent(
-                    this,
-                    Mylibrary::class.java)
-                startActivity(i)
-            }
-        )
-    }
-
-    //Fungsi Search
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-
+        //Fungsi Search
         btnsearch_tracklist.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
@@ -76,7 +60,6 @@ class TrackList : AppCompatActivity() {
                 return false
             }
         })
-        return true
     }
 
     //filter digunakan untuk Fungsi Search
@@ -99,5 +82,18 @@ class TrackList : AppCompatActivity() {
 
             imageAdapterTracklist.filterList(filteredlist)
         }
+    }
+
+    //Fungsi Button Back
+    private fun back_tracklist(){
+        tombolback_tracklist.setOnClickListener(
+
+            View.OnClickListener {
+                val i = Intent(
+                    this,
+                    Mylibrary::class.java)
+                startActivity(i)
+            }
+        )
     }
 }
