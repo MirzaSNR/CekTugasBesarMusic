@@ -1,17 +1,22 @@
-package com.example.tugasbesarmusic
+package com.tubes.musicappproject
 
-import android.provider.MediaStore
-import java.sql.Time
+data class MusicTrack(
+    val id: Long = 0,
+    val title: String,
+    val album: String,
+    val artist: String,
+    val path: String,
+    val duration: Long = 0,
+    val artUri: String = ""
+)
 
-
-class MusicTrack {
-    lateinit var  id: String
-    lateinit var title: String
-    lateinit var album: ArrayList<MusicTrack>
-    lateinit var artist: String
-    lateinit var path: String
-    lateinit var duration: Time
+class Playlist {
+    lateinit var name: String
+    lateinit var playlist: ArrayList<MusicTrack>
+    lateinit var createdBy: String
+    lateinit var createdOn: String
 }
-class MusicAlbum {
-    var ref: ArrayList<MediaStore.Audio.Albums> = ArrayList()
+
+class MusicPlaylist {
+    var ref: ArrayList<Playlist> = ArrayList()
 }
