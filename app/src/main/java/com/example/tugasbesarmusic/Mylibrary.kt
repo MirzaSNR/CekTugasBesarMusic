@@ -17,11 +17,11 @@ class Mylibrary : AppCompatActivity(){
             startActivity(intent)
         }
 
-        val albumlist = findViewById<RelativeLayout>(R.id.albumlist)
+/*        val albumlist = findViewById<RelativeLayout>(R.id.albumlist)
         albumlist.setOnClickListener(){
             val intent = Intent(this@Mylibrary, MusicAlbum::class.java)
             startActivity(intent)
-        }
+        }*/
 
         val tracklist = findViewById<RelativeLayout>(R.id.tracklist)
         tracklist.setOnClickListener(){

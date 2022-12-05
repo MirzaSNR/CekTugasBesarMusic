@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.tubes.musicappproject.MusicTrack
 import java.util.*
-class GridAlbumDetailAdapter internal constructor(private val
+/*class GridAlbumDetailAdapter internal constructor(private val
                                                   gridAlbumDetailList: ArrayList<MusicTrack>) :
     RecyclerView.Adapter<GridAlbumDetailAdapter.GridViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
@@ -47,8 +47,8 @@ class GridAlbumDetailAdapter internal constructor(private val
     }
     override fun getItemCount(): Int {
         return gridAlbumDetailList.size
-    }
-    inner class GridViewHolder(itemView: View) :
+    }*/
+   /* inner class GridViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView =
             itemView.findViewById(R.id.image_Album)
@@ -60,4 +60,4 @@ class GridAlbumDetailAdapter internal constructor(private val
     interface OnItemClickCallback {
         fun onItemClicked(data: MusicTrack)
     }
-}
+}*/

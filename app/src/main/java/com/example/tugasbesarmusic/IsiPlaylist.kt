@@ -1,18 +1,24 @@
 package com.example.tugasbesarmusic
 
+    import android.content.Intent
     import android.os.Bundle
+    import android.view.View
     import androidx.appcompat.app.AppCompatActivity
     import androidx.recyclerview.widget.RecyclerView
+    import kotlinx.android.synthetic.main.activity_isi_playlist.*
+    import kotlinx.android.synthetic.main.activity_tracklist.*
 
 
-    class IsiPlaylist: AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_isi_playlist)
+class IsiPlaylist: AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_isi_playlist)
 
-            modelAdapterIsiPlaylist()
-        }
-        private fun modelAdapterIsiPlaylist(){
+        back_isiplaylist()
+        modelAdapterIsiPlaylist()
+    }
+
+        private fun modelAdapterIsiPlaylist() {
             val isiPlaylist = listOf<ModelIsiPlaylist>(
                 ModelIsiPlaylist(1, "Cinta Butuh Waktu", "Vierratele", R.drawable.viera),
                 ModelIsiPlaylist(2, "Seandainya", "Vierratele", R.drawable.vieera),
@@ -28,9 +34,24 @@ package com.example.tugasbesarmusic
                 ModelIsiPlaylist(12, "Nama Track", "Nama Artist", R.drawable.cover_white),
             )
 
-            val imageAdapterIsiPlaylist = ImageAdapterIsiPlaylist( isiPlaylist )
+            val imageAdapterIsiPlaylist = ImageAdapterIsiPlaylist(isiPlaylist)
             findViewById<RecyclerView>(R.id.recyclerView).adapter = imageAdapterIsiPlaylist
+
         }
+
+        private fun back_isiplaylist() {
+            tombolback_isiplaylist.setOnClickListener(
+
+                View.OnClickListener {
+                    val i = Intent(
+                        this,
+                        Mylibrary::class.java
+                    )
+                    startActivity(i)
+                }
+            )
 
 
         }
+
+    }

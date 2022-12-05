@@ -2,7 +2,7 @@ package com.example.tugasbesarmusic
 
 class Playlist {
     lateinit var name: String
-    lateinit var playlist: ArrayList<MusicTrack>
+/*    lateinit var playlist: ArrayList<MusicTrack>*/
     lateinit var createdBy: String
     lateinit var createdOn: String
 }
