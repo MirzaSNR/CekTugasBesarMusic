@@ -18,7 +18,7 @@ class AlbumActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_album)
-        rv_album = findViewById(R.id.grid_Album)
+        rv_album = findViewById(R.id.rv_album)
         rv_album.setHasFixedSize(true)
         list = DataMusic.getAlbumList(this@AlbumActivity)
         showRecyclerGrid()

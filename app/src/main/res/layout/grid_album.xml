@@ -15,7 +15,7 @@
     >
     
     <ImageView
-        android:id="@+id/image_Lagu"
+        android:id="@+id/image_Album"
         android:layout_width="160dp"
         android:layout_height="150dp"
         android:adjustViewBounds="true"
@@ -24,7 +24,7 @@
         android:src="@drawable/cover_white">
     </ImageView>
     <TextView
-        android:id="@+id/name_Lagu"
+        android:id="@+id/name_Album"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"

@@ -15,7 +15,7 @@ class DetailAlbumActivity : AppCompatActivity() {
 
     private lateinit var rv_album_detail: RecyclerView
     private lateinit var list: ArrayList<MusicTrack>
-/*    private lateinit var gridAlbumDetailAdapter: GridAlbumDetailAdapter*/
+    private lateinit var gridAlbumDetailAdapter: GridAlbumDetailAdapter
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,11 +34,11 @@ class DetailAlbumActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
         }
     }
-   /* fun showRecyclerGrid() {
+    fun showRecyclerGrid() {
         rv_album_detail.layoutManager = GridLayoutManager(this@DetailAlbumActivity, 2)
         gridAlbumDetailAdapter = GridAlbumDetailAdapter(list)
         rv_album_detail.adapter = gridAlbumDetailAdapter
-    }*/
+    }
     @RequiresApi(Build.VERSION_CODES.O)
     fun getDetailAlbum(context: Context, item: String):
             ArrayList<MusicTrack>{
