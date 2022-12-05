@@ -115,7 +115,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="55dp"
-                        android:background="@drawable/cover_white">
+                        android:background="@drawable/coverwhite">
 
                     </ImageView>
 
@@ -223,8 +223,8 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/circle_icon">
 
         <ImageView
@@ -232,7 +232,8 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:paddingLeft="40dp"
-            android:src="@drawable/albumlist"></ImageView>
+            android:src="@drawable/albumlist">
+        </ImageView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
