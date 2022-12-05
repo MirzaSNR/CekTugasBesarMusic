@@ -1,57 +1,97 @@
 package com.example.tugasbesarmusic
 
-    import android.content.Intent
-    import android.os.Bundle
-    import android.view.View
-    import androidx.appcompat.app.AppCompatActivity
-    import androidx.recyclerview.widget.RecyclerView
-    import kotlinx.android.synthetic.main.activity_isi_playlist.*
-    import kotlinx.android.synthetic.main.activity_tracklist.*
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.widget.SearchView
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_isi_playlist.*
+import kotlinx.android.synthetic.main.activity_tracklist.*
 
+class IsiPlaylist : AppCompatActivity() {
 
-class IsiPlaylist: AppCompatActivity() {
+    lateinit var isiplaylistRV: RecyclerView
+    lateinit var imageAdapterIsiPlaylist: ImageAdapterIsiPlaylist
+    lateinit var isiplaylistList: ArrayList<IsiPlaylistAttribute>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_isi_playlist)
 
         back_isiplaylist()
-        modelAdapterIsiPlaylist()
+//
+
+        isiplaylistRV = findViewById(R.id.idRVTracklist)
+
+        isiplaylistList = ArrayList()
+
+        imageAdapterIsiPlaylist = ImageAdapterIsiPlaylist(isiplaylistList)
+
+        isiplaylistRV.adapter = imageAdapterIsiPlaylist
+
+        isiplaylistList.add(IsiPlaylistAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
+        isiplaylistList.add(IsiPlaylistAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
+        isiplaylistList.add(IsiPlaylistAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
+        isiplaylistList.add(IsiPlaylistAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+
+        imageAdapterIsiPlaylist.notifyDataSetChanged()
+
+        //Fungsi Search
+        btnsearch_tracklist.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(msg: String): Boolean {
+
+                filter(msg)
+                return false
+            }
+        })
     }
 
-        private fun modelAdapterIsiPlaylist() {
-            val isiPlaylist = listOf<ModelIsiPlaylist>(
-                ModelIsiPlaylist(1, "Cinta Butuh Waktu", "Vierratele", R.drawable.viera),
-                ModelIsiPlaylist(2, "Seandainya", "Vierratele", R.drawable.vieera),
-                ModelIsiPlaylist(3, "Perih", "Vierratele", R.drawable.vieraaa),
-                ModelIsiPlaylist(4, "Dengarkan Curhatku", "Vierratele", R.drawable.vierra),
-                ModelIsiPlaylist(5, "Rasa Ini", "Vierratele", R.drawable.vierrraa),
-                ModelIsiPlaylist(6, "Tinggalkanku", "Vierratele", R.drawable.cover_white),
-                ModelIsiPlaylist(7, "Nama Track", "Nama Artist", R.drawable.cover_white),
-                ModelIsiPlaylist(8, "Nama Track", "Nama Artist", R.drawable.cover_white),
-                ModelIsiPlaylist(9, "Nama Track", "Nama Artist", R.drawable.cover_white),
-                ModelIsiPlaylist(10, "Nama Track", "Nama Artist", R.drawable.cover_white),
-                ModelIsiPlaylist(11, "Nama Track", "Nama Artist", R.drawable.cover_white),
-                ModelIsiPlaylist(12, "Nama Track", "Nama Artist", R.drawable.cover_white),
-            )
+    //filter digunakan untuk Fungsi Search
+    private fun filter(text: String) {
 
-            val imageAdapterIsiPlaylist = ImageAdapterIsiPlaylist(isiPlaylist)
-            findViewById<RecyclerView>(R.id.recyclerView).adapter = imageAdapterIsiPlaylist
+        val filteredlist: ArrayList<IsiPlaylistAttribute> = ArrayList()
 
+
+        for (item in isiplaylistList) {
+
+            if (item.title.toLowerCase().contains(text.toLowerCase())) {
+
+                filteredlist.add(item)
+            }
         }
+        if (filteredlist.isEmpty()) {
 
-        private fun back_isiplaylist() {
-            tombolback_isiplaylist.setOnClickListener(
+            Toast.makeText(this, "No Data Found..", Toast.LENGTH_SHORT).show()
+        } else {
 
-                View.OnClickListener {
-                    val i = Intent(
-                        this,
-                        Mylibrary::class.java
-                    )
-                    startActivity(i)
-                }
-            )
-
-
+            imageAdapterIsiPlaylist.filterList(filteredlist)
         }
-
     }
+
+    //Fungsi Button Back
+    private fun back_isiplaylist(){
+        tombolback_isiplaylist.setOnClickListener(
+
+            View.OnClickListener {
+                val i = Intent(
+                    this,
+                    Mylibrary::class.java)
+                startActivity(i)
+            }
+        )
+    }}

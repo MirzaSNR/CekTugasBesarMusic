@@ -7,26 +7,46 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ImageAdapterIsiPlaylist (
-    private val listIsiPlaylist: List<ModelIsiPlaylist>
-) : RecyclerView.Adapter<ImageAdapterIsiPlaylist.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= ViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.adapter_image_isiplaylist, parent, false)
-    )
+class ImageAdapterIsiPlaylist(
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val isiPlaylist = listIsiPlaylist[position]
-        holder.imageView.setImageResource( isiPlaylist.image )
-        holder.textView_isiplaylist.text = isiPlaylist.judul
-        holder.textView2_isiplaylist.text = isiPlaylist.pencipta
+    private var isiplaylist: ArrayList<IsiPlaylistAttribute>,
+) : RecyclerView.Adapter<ImageAdapterIsiPlaylist.TrackViewHolder>() {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ImageAdapterIsiPlaylist.TrackViewHolder {
+
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.adapter_image_isiplaylist,
+            parent, false
+        )
+
+        return TrackViewHolder(itemView)
     }
 
-    override fun getItemCount() = listIsiPlaylist.size
+    fun filterList(filterlist: ArrayList<IsiPlaylistAttribute>) {
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val imageView = view.findViewById<ImageView>(R.id.imageView)
-        val textView_isiplaylist = view.findViewById<TextView>(R.id.textView_isiplaylist)
-        val textView2_isiplaylist = view.findViewById<TextView>(R.id.textView2_isiplaylist)
+        isiplaylist = filterlist
+
+        notifyDataSetChanged()
+    }
+
+    override fun onBindViewHolder(holder: ImageAdapterIsiPlaylist.TrackViewHolder, position: Int) {
+        // on below line we are setting data to our text view and our image view.
+        holder.titleName.text = isiplaylist.get(position).title
+        holder.artistName.text = isiplaylist.get(position).artist
+        holder.imageTrack.setImageResource(isiplaylist.get(position).image)
+    }
+
+    class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val titleName: TextView = itemView.findViewById(R.id.textView_isiplaylist)
+        val artistName: TextView = itemView.findViewById(R.id.textView2_isiplaylist)
+        val imageTrack: ImageView = itemView.findViewById(R.id.imageView)
+    }
+
+    override fun getItemCount(): Int {
+        return  isiplaylist.size
     }
 }
