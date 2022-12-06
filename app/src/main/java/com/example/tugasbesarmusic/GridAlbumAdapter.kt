@@ -11,8 +11,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.tubes.musicappproject.MusicTrack
 import java.util.*
-class GridAlbumAdapter internal constructor(private val gridAlbumList:
-                                            ArrayList<MusicTrack>) :
+import kotlin.collections.ArrayList
+
+class GridAlbumAdapter internal constructor(private var gridAlbumList:ArrayList<MusicTrack>) :
     RecyclerView.Adapter<GridAlbumAdapter.GridViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -52,5 +53,9 @@ class GridAlbumAdapter internal constructor(private val gridAlbumList:
     }
     interface OnItemClickCallback {
         fun onItemClicked(data: MusicTrack)
+    }
+    fun setfilter(datasearch: ArrayList<MusicTrack>){
+        this.gridAlbumList = datasearch
+        notifyDataSetChanged()
     }
 }
