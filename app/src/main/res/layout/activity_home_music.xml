@@ -23,6 +23,7 @@
         tools:ignore="MissingConstraints"></View>
 
     <ImageView
+        android:id="@+id/ibtnsetting"
         android:layout_width="65dp"
         android:layout_height="76dp"
         android:src="@drawable/setting"
@@ -192,8 +193,8 @@
 
     <ImageButton
         android:id="@+id/btnrepeat_HomeMusic"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+        android:layout_width="71dp"
+        android:layout_height="62dp"
         android:background="@color/black"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -202,7 +203,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.681"
-        app:srcCompat="@drawable/repeat" />
+        app:srcCompat="@drawable/repeat"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
