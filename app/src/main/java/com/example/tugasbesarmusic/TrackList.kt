@@ -9,7 +9,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_tracklist.*
 
-class TrackList : AppCompatActivity() {
+class TrackList : AppCompatActivity(), ImageAdapterTracklist.OnItemClickListener {
 
     lateinit var tracklistRV: RecyclerView
     lateinit var imageAdapterTracklist: ImageAdapterTracklist
@@ -26,14 +26,32 @@ class TrackList : AppCompatActivity() {
 
         tracklistList = ArrayList()
 
-        imageAdapterTracklist = ImageAdapterTracklist(tracklistList)
+        imageAdapterTracklist = ImageAdapterTracklist(tracklistList, this)
 
         tracklistRV.adapter = imageAdapterTracklist
 
-        tracklistList.add(TracklistAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(
+            TracklistAttribute(
+                "Die For You",
+                "Joji",
+                R.drawable.cover_joji_smithereens
+            )
+        )
         tracklistList.add(TracklistAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
-        tracklistList.add(TracklistAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
-        tracklistList.add(TracklistAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(
+            TracklistAttribute(
+                "Before The Day Is Over",
+                "Joji",
+                R.drawable.cover_joji_smithereens
+            )
+        )
+        tracklistList.add(
+            TracklistAttribute(
+                "YUKON (INTERLUDE)",
+                "Joji",
+                R.drawable.cover_joji_smithereens
+            )
+        )
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
@@ -44,6 +62,7 @@ class TrackList : AppCompatActivity() {
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
 
         imageAdapterTracklist.notifyDataSetChanged()
+
 
         //Fungsi Search
         btnsearch_tracklist.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
@@ -83,15 +102,23 @@ class TrackList : AppCompatActivity() {
     }
 
     //Fungsi Button Back
-    private fun back_tracklist(){
+    private fun back_tracklist() {
         tombolback_tracklist.setOnClickListener(
 
             View.OnClickListener {
                 val i = Intent(
                     this,
-                    Mylibrary::class.java)
+                    Mylibrary::class.java
+                )
                 startActivity(i)
             }
         )
+    }
+
+    //Fungsi Listener RecyclerView
+    override fun onItemClick(position: Int) {
+        Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
+        val clickedItem: TracklistAttribute = tracklistList[position]
+        imageAdapterTracklist.notifyItemChanged(position)
     }
 }
