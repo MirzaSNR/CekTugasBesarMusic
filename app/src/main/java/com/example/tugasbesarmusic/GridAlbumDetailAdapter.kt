@@ -35,7 +35,7 @@ class GridAlbumDetailAdapter internal constructor(private val
             .into(holder.imgPhoto)
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context,
-                PlayerActivity::class.java)
+                HomeMusic::class.java)
             intent.putExtra("position", position)
             intent.putExtra("music", "album")
             intent.putExtra("item", grid.album)
