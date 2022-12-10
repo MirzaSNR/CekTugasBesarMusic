@@ -7,32 +7,30 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
-class ImageAdapterIsiPlaylist(
-
-    private var isiplaylist: ArrayList<IsiPlaylistAttribute>,
-) : RecyclerView.Adapter<ImageAdapterIsiPlaylist.TrackViewHolder>() {
+class AdapterIsiPlaylist (
+    private var isiplaylist: ArrayList<musicAttribute>,
+) : RecyclerView.Adapter<AdapterIsiPlaylist.TrackViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ImageAdapterIsiPlaylist.TrackViewHolder {
+    ): AdapterIsiPlaylist.TrackViewHolder {
 
-        val itemView = LayoutInflater.from(parent.context).inflate(
+        val itemViewadapter_isiplaylist = LayoutInflater.from(parent.context).inflate(
             R.layout.adapter_image_isiplaylist,
             parent, false
         )
 
-        return TrackViewHolder(itemView)
+        return TrackViewHolder(itemViewadapter_isiplaylist)
     }
 
-    fun filterList(filterlist: ArrayList<IsiPlaylistAttribute>) {
+    fun filterList(filterlist: ArrayList<musicAttribute>) {
 
         isiplaylist = filterlist
 
         notifyDataSetChanged()
     }
 
-    override fun onBindViewHolder(holder: ImageAdapterIsiPlaylist.TrackViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterIsiPlaylist.TrackViewHolder, position: Int) {
         // on below line we are setting data to our text view and our image view.
         holder.titleName.text = isiplaylist.get(position).title
         holder.artistName.text = isiplaylist.get(position).artist
@@ -41,9 +39,9 @@ class ImageAdapterIsiPlaylist(
 
     class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val titleName: TextView = itemView.findViewById(R.id.textView_isiplaylist)
-        val artistName: TextView = itemView.findViewById(R.id.textView2_isiplaylist)
-        val imageTrack: ImageView = itemView.findViewById(R.id.imageView)
+        val titleName: TextView = itemView.findViewById(R.id.TextView_isiplaylist)
+        val artistName: TextView = itemView.findViewById(R.id.TextView_isiplaylist2)
+        val imageTrack: ImageView = itemView.findViewById(R.id.imageView_isiplaylist)
     }
 
     override fun getItemCount(): Int {

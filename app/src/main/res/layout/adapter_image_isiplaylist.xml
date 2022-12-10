@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="180dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/frame_image_isiplaylist"
-    android:layout_marginTop="6dp"
-    android:layout_marginBottom="6dp"
+    android:background="@drawable/frame_image_tracklist"
+    android:layout_marginTop="15dp"
     android:layout_marginLeft="8dp"
     android:padding="10dp"
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_isiplaylist"
         android:layout_width="160dp"
         android:layout_height="150dp"
         android:adjustViewBounds="true"
@@ -22,19 +20,20 @@
         android:src="@drawable/cover_white">
     </ImageView>
     <TextView
-        android:id="@+id/textView_isiplaylist"
+        android:id="@+id/TextView_isiplaylist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:text="Nama Playlist"
-        android:singleLine="true">
+        tools:text="Nama Track"
+        android:singleLine="true"
+        >
 
     </TextView>
 
     <TextView
-        android:id="@+id/textView2_isiplaylist"
+        android:id="@+id/TextView_isiplaylist2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"

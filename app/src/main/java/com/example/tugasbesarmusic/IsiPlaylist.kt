@@ -1,53 +1,44 @@
-package com.example.tugasbesarmusic
+package com.example.cloneproject
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tugasbesarmusic.AdapterIsiPlaylist
+import com.example.tugasbesarmusic.musicAttribute
 import kotlinx.android.synthetic.main.activity_isi_playlist.*
-import kotlinx.android.synthetic.main.activity_tracklist.*
 
-class IsiPlaylist : AppCompatActivity() {
-
+class IsiPlaylist :AppCompatActivity() {
     lateinit var isiplaylistRV: RecyclerView
-    lateinit var imageAdapterIsiPlaylist: ImageAdapterIsiPlaylist
-    lateinit var isiplaylistList: ArrayList<IsiPlaylistAttribute>
+    lateinit var imageAdapterisiPlaylist: AdapterIsiPlaylist
+    lateinit var addIsiPlaylist: ArrayList<musicAttribute>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_isi_playlist)
 
-        back_isiplaylist()
-//
+        back_addtrack()
 
-        isiplaylistRV = findViewById(R.id.idRVTracklist)
+        isiplaylistRV = findViewById(R.id.idRVIsiplaylist)
 
-        isiplaylistList = ArrayList()
+        addIsiPlaylist = ArrayList()
 
-        imageAdapterIsiPlaylist = ImageAdapterIsiPlaylist(isiplaylistList)
+        imageAdapterisiPlaylist = AdapterIsiPlaylist(addIsiPlaylist)
 
-        isiplaylistRV.adapter = imageAdapterIsiPlaylist
+        isiplaylistRV.adapter = imageAdapterisiPlaylist
 
-        isiplaylistList.add(IsiPlaylistAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
-        isiplaylistList.add(IsiPlaylistAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
-        isiplaylistList.add(IsiPlaylistAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
-        isiplaylistList.add(IsiPlaylistAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
-        isiplaylistList.add(IsiPlaylistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
+        addIsiPlaylist.add(musicAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
+        addIsiPlaylist.add(musicAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
+        addIsiPlaylist.add(musicAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
+        addIsiPlaylist.add(musicAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
 
-        imageAdapterIsiPlaylist.notifyDataSetChanged()
+        imageAdapterisiPlaylist.notifyDataSetChanged()
 
         //Fungsi Search
-        btnsearch_tracklist.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+        btnsearch_isiplaylist.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
             android.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 return false
@@ -64,10 +55,10 @@ class IsiPlaylist : AppCompatActivity() {
     //filter digunakan untuk Fungsi Search
     private fun filter(text: String) {
 
-        val filteredlist: ArrayList<IsiPlaylistAttribute> = ArrayList()
+        val filteredlist: ArrayList<musicAttribute> = ArrayList()
 
 
-        for (item in isiplaylistList) {
+        for (item in addIsiPlaylist) {
 
             if (item.title.toLowerCase().contains(text.toLowerCase())) {
 
@@ -79,19 +70,20 @@ class IsiPlaylist : AppCompatActivity() {
             Toast.makeText(this, "No Data Found..", Toast.LENGTH_SHORT).show()
         } else {
 
-            imageAdapterIsiPlaylist.filterList(filteredlist)
+            imageAdapterisiPlaylist.filterList(filteredlist)
         }
     }
 
     //Fungsi Button Back
-    private fun back_isiplaylist(){
+    private fun back_addtrack(){
         tombolback_isiplaylist.setOnClickListener(
 
             View.OnClickListener {
                 val i = Intent(
                     this,
-                    Mylibrary::class.java)
+                    TrackList::class.java)
                 startActivity(i)
             }
         )
-    }}
+    }
+}
