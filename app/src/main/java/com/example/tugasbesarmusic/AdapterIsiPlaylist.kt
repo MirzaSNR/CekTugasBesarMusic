@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class AdapterIsiPlaylist (
-    private var isiplaylist: ArrayList<musicAttribute>,
+    private var isiplaylist: ArrayList<IsiPlaylistAttribute>,
 ) : RecyclerView.Adapter<AdapterIsiPlaylist.TrackViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -23,7 +23,7 @@ class AdapterIsiPlaylist (
         return TrackViewHolder(itemViewadapter_isiplaylist)
     }
 
-    fun filterList(filterlist: ArrayList<musicAttribute>) {
+    fun filterList(filterlist: ArrayList<IsiPlaylistAttribute>) {
 
         isiplaylist = filterlist
 
