@@ -30,28 +30,10 @@ class TrackList : AppCompatActivity(), ImageAdapterTracklist.OnItemClickListener
 
         tracklistRV.adapter = imageAdapterTracklist
 
-        tracklistList.add(
-            TracklistAttribute(
-                "Die For You",
-                "Joji",
-                R.drawable.cover_joji_smithereens
-            )
-        )
+        tracklistList.add(TracklistAttribute("Die For You", "Joji", R.drawable.cover_joji_smithereens))
         tracklistList.add(TracklistAttribute("Dissolve", "Joji", R.drawable.cover_joji_smithereens))
-        tracklistList.add(
-            TracklistAttribute(
-                "Before The Day Is Over",
-                "Joji",
-                R.drawable.cover_joji_smithereens
-            )
-        )
-        tracklistList.add(
-            TracklistAttribute(
-                "YUKON (INTERLUDE)",
-                "Joji",
-                R.drawable.cover_joji_smithereens
-            )
-        )
+        tracklistList.add(TracklistAttribute("Before The Day Is Over", "Joji", R.drawable.cover_joji_smithereens))
+        tracklistList.add(TracklistAttribute("YUKON (INTERLUDE)", "Joji", R.drawable.cover_joji_smithereens))
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
         tracklistList.add(TracklistAttribute("Nama Track", "Nama Artist", R.drawable.cover_white))
@@ -117,7 +99,7 @@ class TrackList : AppCompatActivity(), ImageAdapterTracklist.OnItemClickListener
 
     //Fungsi Listener RecyclerView
     override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Playing", Toast.LENGTH_SHORT).show()
         val clickedItem: TracklistAttribute = tracklistList[position]
         imageAdapterTracklist.notifyItemChanged(position)
     }
