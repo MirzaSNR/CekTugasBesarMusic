@@ -98,9 +98,10 @@ class TrackList : AppCompatActivity(), ImageAdapterTracklist.OnItemClickListener
     }
 
     //Fungsi Listener RecyclerView
-    override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Playing", Toast.LENGTH_SHORT).show()
-        val clickedItem: TracklistAttribute = tracklistList[position]
+    override fun onItemClick(position: Int,) {
+        Toast.makeText(this, "Playing " , Toast.LENGTH_LONG).show()
         imageAdapterTracklist.notifyItemChanged(position)
+        val intent = Intent(this@TrackList, HomeMusic::class.java)
+        startActivity(intent)
     }
 }
