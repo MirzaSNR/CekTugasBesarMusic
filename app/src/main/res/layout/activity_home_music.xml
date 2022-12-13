@@ -20,10 +20,10 @@
         app:layout_constraintVertical_bias="0.0"
         app:layout_editor_absoluteX="2dp"
         app:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints"></View>
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/ibtnsetting"
+        android:id="@+id/btnsetting"
         android:layout_width="65dp"
         android:layout_height="76dp"
         android:src="@drawable/setting"
@@ -33,10 +33,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        tools:ignore="MissingConstraints"></ImageView>
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/judul"
         android:layout_width="271dp"
         android:layout_height="61dp"
         android:text="Sunset Di Tanah Anarki"
@@ -51,7 +51,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/artist"
         android:layout_width="229dp"
         android:layout_height="32dp"
         android:text="Superman Is Dead"
@@ -65,7 +65,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/album"
         android:layout_width="229dp"
         android:layout_height="32dp"
         android:text="Running"
@@ -80,7 +80,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_player"
         android:layout_width="188dp"
         android:layout_height="214dp"
         android:src="@drawable/sidsid"
@@ -91,7 +91,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/ibtn1"
+        android:id="@+id/btn_back"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="#FF585858"
@@ -120,8 +120,10 @@
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="339dp"
+        android:layout_width="0dp"
         android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,23 +134,35 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/total_time_HomeMusic"
+        android:id="@+id/end"
+        android:layout_width="24dp"
+        android:layout_height="17dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="0:00"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_margin="20dp"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="16dp"
         android:text="0:00"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/fab_Play"
+        android:id="@+id/fab_play"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="#585858"
@@ -163,7 +177,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/btnNext_HomeMusic"
+        android:id="@+id/fab_next"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="#585858"
@@ -192,7 +206,7 @@
         app:srcCompat="@drawable/pref" />
 
     <ImageButton
-        android:id="@+id/btnrepeat_HomeMusic"
+        android:id="@+id/fab_repeat"
         android:layout_width="71dp"
         android:layout_height="62dp"
         android:background="@color/black"
