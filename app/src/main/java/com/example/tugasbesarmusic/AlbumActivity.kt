@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tubes.musicappproject.DataMusic
 import com.tubes.musicappproject.MusicTrack
-
+//cek
 class AlbumActivity : AppCompatActivity() {
     private lateinit var rv_album: RecyclerView
     private lateinit var list: ArrayList<MusicTrack>

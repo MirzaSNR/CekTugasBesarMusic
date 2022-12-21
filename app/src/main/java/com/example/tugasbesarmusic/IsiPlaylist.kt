@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_isi_playlist.*
-
+//cek
 class IsiPlaylist : AppCompatActivity() {
 
     lateinit var isiplaylistRV: RecyclerView

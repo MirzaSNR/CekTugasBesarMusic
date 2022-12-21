@@ -12,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.tubes.musicappproject.MusicTrack
 import java.util.*
 import kotlin.collections.ArrayList
-
+//cek
 class GridAlbumAdapter internal constructor(private var gridAlbumList:ArrayList<MusicTrack>) :
     RecyclerView.Adapter<GridAlbumAdapter.GridViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback

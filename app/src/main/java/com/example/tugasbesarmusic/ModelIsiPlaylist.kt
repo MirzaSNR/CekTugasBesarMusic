@@ -5,4 +5,4 @@ data class ModelIsiPlaylist (
     val judul: String,
     val pencipta: String,
     val image: Int
-)
+)//cek

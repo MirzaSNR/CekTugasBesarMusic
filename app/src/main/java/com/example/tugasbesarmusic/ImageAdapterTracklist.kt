@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
+//cek
 class ImageAdapterTracklist(
     private var tracklistList: ArrayList<TracklistAttribute>,
     private val listener : OnItemClickListener
